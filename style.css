@@ -1,0 +1,108 @@
+@keyframes arcoiris {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    margin: 0;
+
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: arcoiris 15s ease infinite;
+}
+
+.calculadora-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#listaNumeros, h2 {
+    color: black;
+    background-color: white;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    width: 100%;
+}
+
+input {
+    font-family: inherit;
+    background-color: white;
+    border-radius: 16px;
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 0;
+    box-sizing: border-box;
+}
+
+button {
+    font-family: inherit;
+    background-color: white;
+    border-radius: 32px;
+    cursor: pointer;
+    padding: 1rem;
+    border: 0;
+
+    transition: 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: lightgrey;
+}
+
+.btn-verde {
+    background-color: green;
+    color: white;
+}
+
+.btn-verde:hover {
+    background-color: darkgreen;
+}
+
+.wave {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.wave img {
+    width: 200px;
+    height: auto;
+}
+
+.wave span {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-size: 4rem;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  
+    animation: wave-animation 2s ease-in-out infinite, rainbow-text 2s ease-in-out infinite;
+  
+    animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes wave-animation {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+}
+
+@keyframes rainbow-text {
+    0%, 100% { color: #ff0055; }
+    25% { color: #00fbff; }
+    50% { color: #7d41ff; }
+    75% { color: #ffff00; }
+}

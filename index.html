@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="calculadora-container">
+        <div class="wave">
+            <div>
+                <span style="--i:1">C</span>
+                <span style="--i:2">a</span>
+                <span style="--i:3">l</span>
+                <span style="--i:4">c</span>
+                <span style="--i:5">u</span>
+                <span style="--i:6">l</span>
+                <span style="--i:7">a</span>
+                <span style="--i:8">d</span>
+                <span style="--i:9">o</span>
+                <span style="--i:10">r</span>
+                <span style="--i:11">a</span>
+            </div>
+            <img src="img/nyan-cat.gif" alt="Nyan Cat">
+        </div>
+        
+        <div>
+            <input type="number" id="inputNumero" placeholder="Digite um número">
+            <button onclick="adicionarNumero()">Adicionar Número</button>
+        </div>
+        
+        <h2 id="listaNumeros">Números: []</h2>
+        
+        <div>
+            <button onclick="calcularMedia()" class="btn-verde">Calcular média aritmética</button>
+            <button onclick="calcularMediana()" class="btn-verde">Calcular mediana</button>
+            <button onclick="calcularVariancia()" class="btn-verde">Calcular variância amostral</button>
+            <button onclick="calcularDesvio()" class="btn-verde">Calcular desvio padrão</button>
+            <button onclick="calcularCoeficienteVariacao()" class="btn-verde">Calcular coeficiente da variação</button>
+        </div>
+
+        <h2 id="resultado">Média: -</h2>
+        <button onclick="limpar()">Limpar Tudo</button>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
